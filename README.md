@@ -1,15 +1,33 @@
-## 安装
+## Requirements
+- Neovim >= 0.7.0
 
+
+## Installation
+
+一些前置条件
+
+``` bash
+# LSP
+sudo apt install gcc g++
+
+# 需要pyright，安装nodejs
+curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+
+# 更新一下TreeSitter的包
+: TSupdateSync
 
 ```
-git clone https://gitee.com/ProgramAlchemist/nvim-lua ~/.config/nvim
+
+
+拉取
+
+```
+git clone https://github.com/jumpjumpb3ar/neovim ~/.config/nvim
 ```
 
-
-
-# info
-
-### 插件列表
+## 插件列表
 
 - https://github.com/wbthomason/packer.nvim
 - https://github.com/folke/tokyonight.nvim
@@ -22,12 +40,11 @@ git clone https://gitee.com/ProgramAlchemist/nvim-lua ~/.config/nvim
 > https://neovim.io/doc/user/lsp.html
 
 LSP是语言服务器协议，提供go-to-definition, find-references, hover, completion, rename, format, refactor等功能。
-Nvim提供LSP客户端，服务端靠第三方提供。
+Nvim提供LSP客户端，服务端靠第三方提供，可以通过`masonc`插件来安装管理。
 
 
 ## 快捷键
 
-``` bash
 - gd 显示定义
 - gD 跳转至定义
 - K  显示文档
@@ -41,7 +58,7 @@ b/B 单词回跳
 '.	上次修改的地方
 '^	上次进入插入模式的位置
 
-# vim会记录我们每一次的跳转，可以通过相关命令来跳转到上一次跳转和下一次跳转的位置。
+### vim会记录我们每一次的跳转，可以通过相关命令来跳转到上一次跳转和下一次跳转的位置。
 :jumps 查看跳转记录
 
 <Ctrl + i> 访问前一个跳转
@@ -51,16 +68,15 @@ b/B 单词回跳
 g;
 g, 
 
-# set path=./
+### set path=./
 gf 前往文件
 
 
-# 折叠代码
+### 折叠代码
 zf 创建折叠
 za 切换折叠状态
 zR 展开所有折叠
 zM 收缩所有折叠
-```
 
 
 

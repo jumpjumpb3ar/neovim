@@ -21,7 +21,7 @@ vim.cmd([[
 ]])
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
-  use { "catppuccin/nvim", as = "catppuccin" }
+  use { "catppuccin/nvim", as = "catppuccin" } -- 主题
   use {
     'nvim-lualine/lualine.nvim',  -- 状态栏
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }  -- 状态栏图标
@@ -64,6 +64,7 @@ return require('packer').startup(function(use)
     requires = { {'nvim-lua/plenary.nvim'} }
   }
 
+  use 'karb94/neoscroll.nvim' -- 丝滑移动
 
   if packer_bootstrap then
     require('packer').sync()
